@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .custom-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigasi -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tight gradient-text">PORTFOLIO.</div>
+            <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <a href="#home" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
+                <a href="#work" class="hover:text-blue-600 transition">Karya</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Kontak</a>
+            </div>
+            <button class="md:hidden text-gray-800" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars-staggered text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="inline-block py-1 px-3 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">Tersedia untuk proyek baru</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Menciptakan <span class="gradient-text">Pengalaman Digital</span> yang Berkesan.
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
+                    Saya adalah seorang desainer dan pengembang yang fokus pada pembuatan solusi web yang estetis dan fungsional.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#work" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition custom-shadow">Lihat Karya</a>
+                    <a href="#contact" class="bg-white border border-gray-200 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition">Hubungi Saya</a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="w-80 h-80 md:w-96 md:h-96 bg-blue-600 rounded-full overflow-hidden custom-shadow border-8 border-white">
+                    <!-- Placeholder untuk foto profil -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" alt="Foto Profil" class="w-full h-full object-cover">
+                </div>
+                <!-- Floating Card -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl custom-shadow hidden lg:block">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                            <i class="fa-solid fa-check-double"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold">50+ Proyek</p>
+                            <p class="text-xs text-gray-500">Selesai tepat waktu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Cloud / Tech Stack -->
+    <div class="max-w-7xl mx-auto px-6 py-10 border-y border-gray-100 mb-20">
+        <p class="text-center text-gray-400 text-sm font-medium uppercase tracking-widest mb-8">Keahlian & Teknologi</p>
+        <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition duration-500">
+            <i class="fa-brands fa-html5 text-4xl"></i>
+            <i class="fa-brands fa-css3-alt text-4xl"></i>
+            <i class="fa-brands fa-js text-4xl"></i>
+            <i class="fa-brands fa-react text-4xl"></i>
+            <i class="fa-brands fa-figma text-4xl"></i>
+            <i class="fa-brands fa-node-js text-4xl"></i>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4">Proyek Unggulan</h2>
+                    <p class="text-gray-600">Beberapa karya terbaik yang telah saya selesaikan baru-baru ini.</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="#" class="text-blue-600 font-bold flex items-center space-x-2 group">
+                        <span>Lihat Semua Proyek</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gray-100 aspect-[4/5] project-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white">
+                        <span class="text-sm font-medium mb-2">Web Design / Development</span>
+                        <h3 class="text-2xl font-bold mb-4">E-Commerce Platform</h3>
+                        <a href="#" class="inline-block w-fit bg-white text-gray-900 p-3 rounded-full hover:bg-blue-600 hover:text-white transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gray-100 aspect-[4/5] project-card">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2344&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white">
+                        <span class="text-sm font-medium mb-2">UI/UX Research</span>
+                        <h3 class="text-2xl font-bold mb-4">Aplikasi Kesehatan AI</h3>
+                        <a href="#" class="inline-block w-fit bg-white text-gray-900 p-3 rounded-full hover:bg-blue-600 hover:text-white transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gray-100 aspect-[4/5] project-card">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2340&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white">
+                        <span class="text-sm font-medium mb-2">Branding</span>
+                        <h3 class="text-2xl font-bold mb-4">Identitas Visual Perusahaan</h3>
+                        <a href="#" class="inline-block w-fit bg-white text-gray-900 p-3 rounded-full hover:bg-blue-600 hover:text-white transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Ayo Mulai Proyek Anda</h2>
+            <p class="text-gray-600 mb-12">Apakah Anda memiliki ide menarik? Mari berdiskusi dan mewujudkannya menjadi kenyataan.</p>
+            
+            <form class="space-y-4 text-left bg-white p-8 rounded-3xl custom-shadow border border-gray-100">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Nama Lengkap</label>
+                        <input type="text" placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Email</label>
+                        <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Pesan</label>
+                    <textarea rows="4" placeholder="Ceritakan tentang proyek Anda..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition">Kirim Pesan Sekarang</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-xl font-bold gradient-text mb-4 md:mb-0">PORTFOLIO.</div>
+            <div class="text-gray-500 text-sm">
+                &copy; 2025 Portofolio Anda. Dibuat dengan <i class="fa-solid fa-heart text-red-500"></i>
+            </div>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gray-900 transition"><i class="fa-brands fa-github text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-pink-600 transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-twitter text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animasi Scroll Sederhana atau Interaksi Menu Mobile bisa ditambahkan di sini
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            // Logika untuk toggle menu mobile
+            alert('Menu mobile akan muncul di sini (Versi Demo)');
+        });
+    </script>
+</body>
+</html>
